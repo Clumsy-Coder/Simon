@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Simon game</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+	<body>
+		<div class="container">
+			<div class="row center-align white-text">
+				<h4>freeCodeCamp Simon game</h4>
+			</div>
+			<div class="row">
+				<div class="col s8">
+					<div class="card small center-align grey darken-2 white-text">
+						<div class="card-content">
+							<h1 id="levelDisplay">--</h1>
+						</div>
+						<div class="card-action">
+							<p class="flow-text">Level</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<table class="centered ">
+						<tr>
+							<td>
+								<p>
+									<input type="checkbox" class="filled-in" id="strictMode"  />
+									<label for="strictMode">Strict</label>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<button id="startBtn" class="waves-effect waves-light btn" onclick="newGame()">Start</button>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s3">
+					<button id="greenBtn" class="simon waves-effect waves-light btn green darken-1 disabled" onclick="playerColorPress('green')"></button>       
+				</div>
+				<div class="col s3">
+					<button id="redBtn" class="simon waves-effect waves-light btn red disabled" onclick="playerColorPress('red')"></button>    
+				</div>
+				<div class="col s3">
+					<button id="yellowBtn" class="simon waves-effect waves-light btn yellow disabled" onclick="playerColorPress('yellow')"></button>    
+				</div>
+				<div class="col s3">
+					<button id="blueBtn" class="simon waves-effect waves-light btn blue disabled" onclick="playerColorPress('blue')"></button>    
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
